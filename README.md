@@ -64,3 +64,31 @@ root
 - CloudWatch logs streaming works, but need to verify full metrics and set up dashboards for alerts.
 
 
+### Phase 3 — Local Cloud Workloads (Docker + Hybrid AWS Services)
+
+**Goals**:Simulate cloud-native workload deployment locally by containerizing applications, managing multiple services, and integrating AWS cloud functions (like Cognito for authentication) while avoiding cloud compute costs.
+
+- Built lightweight containerized applications (Nginx + sample Flask app).
+- Created Dockerfiles and Docker Compose configurations for multi-service setup.
+- Deployed containers locally to simulate multiple service workloads.
+- Implemented a local load balancer using Nginx reverse proxy to route requests to multiple containers.
+- Integrated SimpleSAMLphp with AWS Cognito OIDC for user authentication.
+- Configured Flask backend to handle login, authorization, and logout routes with Cognito.
+- Simulated application resilience using Docker restart policies.
+- Demonstrated hybrid cloud concept by combining local container management with AWS cloud authentication.
+
+**Skills Demonstrated**:
+- Local container orchestration and multi-service simulation.
+- Load balancing and service routing with Nginx.
+- Identity federation using AWS Cognito and SimpleSAMLphp. 
+- Docker networking and volume management.
+- Hybrid cloud workflows: local workloads + cloud functions.
+
+**Notes / Issues for Phase Three:**
+- All workloads run locally; no images pushed to AWS ECR or deployed to ECS Fargate.
+- Docker Compose required a separate Dockerfile for Flask backend; initial build failed due to Python werkzeug version conflicts — resolved by updating requirements.txt.
+- Nginx proxy configuration had port conflicts initially; resolved by stopping existing containers and mapping correct ports.
+- Cognito integration completed, but requires a callback URL; currently using local IP for development.
+- SimpleSAMLphp configured to authenticate via Cognito, but production setup will require proper domain and HTTPS certificate.
+- Future improvements include adding hybrid features like S3 storage for backups.
+
