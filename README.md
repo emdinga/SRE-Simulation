@@ -1,4 +1,4 @@
-# SRE-Simulation
+# SRE-Project
 
 ## Phase 1 — Corporate Linux Environment
 
