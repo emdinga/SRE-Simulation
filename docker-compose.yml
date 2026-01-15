@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: phase3-nginx
+    container_name: phase3-web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: always
+    depends_on:
+      - flask-backend
+
+  flask-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile-flask
+    image: phase3-flask
+    container_name: phase3-flask
+    ports:
+      - "5000:5000"
+    restart: always

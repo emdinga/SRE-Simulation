@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+# Install system dependencies required by cryptography & auth libraries
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY flask-backend/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY flask-backend .
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
+
