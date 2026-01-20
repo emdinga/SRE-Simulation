@@ -92,3 +92,34 @@ root
 - SimpleSAMLphp configured to authenticate via Cognito, but production setup will require proper domain and HTTPS certificate.
 - Future improvements include adding hybrid features like S3 storage for backups.
 
+### Phase 4 — Enterprise Identity (Cloud Federation & SAML)
+**Goals**: Build a full enterprise identity stack to demonstrate real cloud engineering, identity federation, and enterprise authentication architecture.
+
+**Achievements**
+
+- Configured Samba AD with internal corporate users
+- Installed and configured SimpleSAMLphp to translate LDAP/AD users to SAML 2.0 assertions
+- Provisioned AWS Cognito with Terraform:
+     - User Pool
+     - SAML Identity Provider linked to SimpleSAMLphp IdP
+     - App Client with OAuth callback & logout URLs
+- Exposed local SimpleSAMLphp instance via Ngrok HTTPS tunnel for Cognito federation
+- Implemented federated login flow:
+      - Cloud App redirects to Cognito
+      - Cognito redirects to SimpleSAMLphp IdP
+      - AD users authenticated via SAML
+      - Tokens returned to App Client
+- Tested authentication for multiple users
+
+**Skills Demonstrated**
+- IAM & Identity Federation: connecting on-prem identity to cloud services
+- SAML: configuring IdP → SP authentication
+- Enterprise Authentication Architecture: bridging internal corporate users with cloud applications
+- Security Mindset: HTTPS tunneling, secure token handling, and federated login flows
+- Terraform Automation: managing Cognito resources programmatically
+  
+**Notes / Issues**
+- Callback URLs must use HTTPS to work with Cognito
+- Ngrok authtoken needed for external cloud federation testing
+- App Client updates (ID & Secret) must match Cognito configuration
+
