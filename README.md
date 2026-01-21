@@ -123,3 +123,50 @@ root
 - Ngrok authtoken needed for external cloud federation testing
 - App Client updates (ID & Secret) must match Cognito configuration
 
+### Phase 5 — Container Orchestration & Kubernetes Platform Engineering
+
+**Goals**:Design, deploy, and operate a production container orchestration platform for Kubernetes operations, container lifecycle management, networking, and troubleshooting.
+
+**Achievements**
+- Deployed a single-node Kubernetes cluster using MicroK8s to simulate an on-prem / edge production environment
+- Built and containerized a Flask backend application using Python 3.11 (slim image)
+- Built and deployed an NGINX frontend container for web access and reverse proxying
+- Enabled and configured the MicroK8s local container registry
+- Managed containerd vs Docker runtime differences, importing images directly into containerd
+- Deployed applications using Kubernetes primitives:
+     - Deployments with replicas, resource requests, and limits
+     - ClusterIP Services for internal service discovery
+     - Ingress (NGINX) for external HTTP access using host-based routing
+- Implemented host-based routing using /etc/hosts for local DNS resolution
+- Successfully exposed the application via Kubernetes Ingress (flask.local)
+- Verified service-to-pod communication using in-cluster BusyBox testing
+- Performed live debugging and recovery of failed workloads:
+     - ErrImagePull, ErrImageNeverPull, ImagePullBackOff
+     - Disk pressure scheduling failures
+     - 502 Bad Gateway errors at the ingress layer
+- Diagnosed and resolved service connectivity issues by validating:
+     - Pod labels and service selectors
+     - TargetPort vs containerPort alignment
+     - Application process listening ports
+- Performed rolling restarts and cleanup of orphaned pods and ReplicaSets
+
+**Skills Demonstrated**
+- Kubernetes Core Concepts: Pods, Deployments, ReplicaSets, Services, Ingress
+- Container Orchestration: managing workloads at scale with declarative manifests
+- Container Runtimes: understanding Docker vs containerd behavior in Kubernetes
+- Kubernetes Networking: Pod IPs, ClusterIP services, CNI (Calico), ingress routing
+- Production Troubleshooting: diagnosing failures across image, network, and runtime layers
+- Platform Engineering Mindset: operating Kubernetes as infrastructure, not just deploying apps
+- Linux & Systems Knowledge: disk pressure, process inspection, and runtime constraints
+- Operational Discipline: iterative debugging using logs, describe, exec, and in-cluster tests
+
+**Notes / Issues**
+- MicroK8s uses containerd, not Docker — locally built images must be pushed to a registry or imported into containerd
+- Disk pressure can prevent pod scheduling and image garbage collection
+- Kubernetes Services require exact label matching to route traffic to pods
+- 502 Bad Gateway errors typically indicate backend service or port mismatches]
+- Minimal container images may not include common debugging tools (ps, netstat)
+- Ingress does not expose services unless the backend application is actively listening on the expected port
+- <img width="434" height="173" alt="imagepullbackoff" src="https://github.com/user-attachments/assets/16368eda-3a37-4a29-af70-b683cb1a54cb" />
+
+
