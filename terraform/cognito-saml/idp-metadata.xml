@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="https://estipulate-river-recent.ngrok-free.dev/simplesamlphp/saml2/idp/metadata.php">
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" errorURL="https://estipulate-river-recent.ngrok-free.dev/simplesamlphp/module.php/core/error/ERRORURL_CODE?ts=ERRORURL_TS&amp;rp=ERRORURL_RP&amp;tid=ERRORURL_TID&amp;ctx=ERRORURL_CTX">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIID7TCCAtWgAwIBAgIUSOot79AVzKF3W0h0RvfW53fyL+IwDQYJKoZIhvcNAQELBQAwgYUxCzAJBgNVBAYTAlpBMRYwFAYDVQQIDA1Ld2FadWx1IE5hdGFsMQ8wDQYDVQQHDAZEdXJiYW4xEDAOBgNVBAoMB2VtZGluZ2ExCzAJBgNVBAsMAklUMQwwCgYDVQQDDANEQzExIDAeBgkqhkiG9w0BCQEWEWVtZGluZ2FAZ21haWwuY29tMB4XDTI2MDEwOTA3MTU0N1oXDTM2MDEwOTA3MTU0N1owgYUxCzAJBgNVBAYTAlpBMRYwFAYDVQQIDA1Ld2FadWx1IE5hdGFsMQ8wDQYDVQQHDAZEdXJiYW4xEDAOBgNVBAoMB2VtZGluZ2ExCzAJBgNVBAsMAklUMQwwCgYDVQQDDANEQzExIDAeBgkqhkiG9w0BCQEWEWVtZGluZ2FAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuxfQVh5cGGmtfO4vVQ+j5r9NjGNQFx16VzVswdHoXbQrlefRIh2e8cgOs0O0MxKGR/sAcBGwrn/dtOstPK+je1XpIJ4DsE0pwmt6ClpNhLi8StFmGEFw/P2QelgURMrWHn9jwLViEGvawXEA53uGUUT1iaTvWEf4zMmxzsKU1s3RD9ib75UKjcSqSmxu4NDYi0iAJsBFKm9O7f3a0FrhlokX1XTzCnnOvuCbvfjjQpJBTmEYD074SmY76IzimXR7vmMBZuJWQN0aFfnb2abA//3lKGsYbVFJrLWfAYzfeUNBE2qzFVO6eWWTJ2xvaS5SQjH8Ob7YB5XP/lI+2+83fwIDAQABo1MwUTAdBgNVHQ4EFgQU7M2MmNYk4SkH/BcTWiTck++Qou8wHwYDVR0jBBgwFoAU7M2MmNYk4SkH/BcTWiTck++Qou8wDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAS2CRBKI9ABr/IZ+h/ttFk+Uo0pubNx3sW53pSRExW8nbSlyYFqHEJjsfYHtD2/Jpf8waRNKe3pC8LabQfnfo0IDjj+IwmHMvzoW8t2AReLfrD509pjG025oR93vUnGPTXx5Hx5IlXihyUDmxaOBlieuDk2Fk4m21+kAliey0Bjn2fGKXO986y+EhlbF+7VzzGu1HR8/3vEptcDb8o2Fz3LnVFcnfRY1DbnZQrA8IBgdGXscXbSgD0Sm5YcehqMk9J4fnjIsHNRksnWOpx1/bTUU3VPEvkciPPb7x2W0uBVbFcOt9eUsHfs+nMwnx7/GHDztt5qbvz4PqN9DyAUJDzA==</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:KeyDescriptor use="encryption">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIID7TCCAtWgAwIBAgIUSOot79AVzKF3W0h0RvfW53fyL+IwDQYJKoZIhvcNAQELBQAwgYUxCzAJBgNVBAYTAlpBMRYwFAYDVQQIDA1Ld2FadWx1IE5hdGFsMQ8wDQYDVQQHDAZEdXJiYW4xEDAOBgNVBAoMB2VtZGluZ2ExCzAJBgNVBAsMAklUMQwwCgYDVQQDDANEQzExIDAeBgkqhkiG9w0BCQEWEWVtZGluZ2FAZ21haWwuY29tMB4XDTI2MDEwOTA3MTU0N1oXDTM2MDEwOTA3MTU0N1owgYUxCzAJBgNVBAYTAlpBMRYwFAYDVQQIDA1Ld2FadWx1IE5hdGFsMQ8wDQYDVQQHDAZEdXJiYW4xEDAOBgNVBAoMB2VtZGluZ2ExCzAJBgNVBAsMAklUMQwwCgYDVQQDDANEQzExIDAeBgkqhkiG9w0BCQEWEWVtZGluZ2FAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuxfQVh5cGGmtfO4vVQ+j5r9NjGNQFx16VzVswdHoXbQrlefRIh2e8cgOs0O0MxKGR/sAcBGwrn/dtOstPK+je1XpIJ4DsE0pwmt6ClpNhLi8StFmGEFw/P2QelgURMrWHn9jwLViEGvawXEA53uGUUT1iaTvWEf4zMmxzsKU1s3RD9ib75UKjcSqSmxu4NDYi0iAJsBFKm9O7f3a0FrhlokX1XTzCnnOvuCbvfjjQpJBTmEYD074SmY76IzimXR7vmMBZuJWQN0aFfnb2abA//3lKGsYbVFJrLWfAYzfeUNBE2qzFVO6eWWTJ2xvaS5SQjH8Ob7YB5XP/lI+2+83fwIDAQABo1MwUTAdBgNVHQ4EFgQU7M2MmNYk4SkH/BcTWiTck++Qou8wHwYDVR0jBBgwFoAU7M2MmNYk4SkH/BcTWiTck++Qou8wDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAS2CRBKI9ABr/IZ+h/ttFk+Uo0pubNx3sW53pSRExW8nbSlyYFqHEJjsfYHtD2/Jpf8waRNKe3pC8LabQfnfo0IDjj+IwmHMvzoW8t2AReLfrD509pjG025oR93vUnGPTXx5Hx5IlXihyUDmxaOBlieuDk2Fk4m21+kAliey0Bjn2fGKXO986y+EhlbF+7VzzGu1HR8/3vEptcDb8o2Fz3LnVFcnfRY1DbnZQrA8IBgdGXscXbSgD0Sm5YcehqMk9J4fnjIsHNRksnWOpx1/bTUU3VPEvkciPPb7x2W0uBVbFcOt9eUsHfs+nMwnx7/GHDztt5qbvz4PqN9DyAUJDzA==</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://estipulate-river-recent.ngrok-free.dev/simplesamlphp/module.php/saml/idp/singleLogout"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://estipulate-river-recent.ngrok-free.dev/simplesamlphp/module.php/saml/idp/singleSignOnService"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor>

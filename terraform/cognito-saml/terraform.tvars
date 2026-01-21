@@ -1,0 +1,10 @@
+user_pool_id = "us-east-1_D6yeYbyEq"
+
+app_callback_urls = [
+  "https://estipulate-river-recent.ngrok-free.dev/login/callback"
+]
+
+app_logout_urls = [
+  "https://estipulate-river-recent.ngrok-free.dev/logout"
+]
+
