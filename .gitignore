@@ -1,0 +1,16 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Docker / build artifacts
+*.tar
+*.tgz
+*.zip
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
