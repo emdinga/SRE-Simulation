@@ -169,4 +169,4 @@ root
 - Ingress does not expose services unless the backend application is actively listening on the expected port
 - <img width="434" height="173" alt="imagepullbackoff" src="https://github.com/user-attachments/assets/16368eda-3a37-4a29-af70-b683cb1a54cb" />
 
-
+ link: "https://drive.google.com/file/d/1JNze643NZgt68KAF4bt1b-NjZ9Ut_J9Z/view?usp=sharing"
